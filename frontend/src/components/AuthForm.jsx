@@ -30,7 +30,7 @@ const AuthForm = ({ type }) => {
         ? { username: formData.username, password: formData.password }
         : formData;
 
-      const response = await axios.post(`http://localhost:5000${endpoint}`, payload);
+      const response = await axios.post(`https://elitelogin.onrender.com${endpoint}`, payload);
       
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify({
